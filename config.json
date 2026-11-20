@@ -1,0 +1,196 @@
+{
+ "_comment": "ANALYSIS parameters (see register.py: ANALYSIS_KEYS) are frozen by the registration. DATA-SOURCE parameters may be corrected if a URL or ID changes; record the change in data/provenance.json.",
+ "regions": {
+  "sumatra": [
+   95.0,
+   -6.2,
+   106.3,
+   6.0
+  ],
+  "kalimantan": [
+   108.5,
+   -4.3,
+   119.3,
+   4.5
+  ],
+  "papua_selatan": [
+   137.5,
+   -9.2,
+   141.1,
+   -5.5
+  ]
+ },
+ "ref_years": [
+  2012,
+  2025
+ ],
+ "panel_start": "2012-01",
+ "panel_end": "2026-09",
+ "min_det": 20,
+ "k_range": "3-12",
+ "methods": [
+  "kmeans",
+  "gmm",
+  "ae_kmeans",
+  "hdbscan"
+ ],
+ "cluster_boot": 50,
+ "shift_years": [
+  2015,
+  2019,
+  2023,
+  2026
+ ],
+ "neutral_years": [
+  2017,
+  2018,
+  2021,
+  2022
+ ],
+ "event_months": "1-10",
+ "event_min_det": 3,
+ "enso_years": [
+  2015,
+  2019,
+  2023
+ ],
+ "holdout_train_end": "2026-07",
+ "leads": [
+  1,
+  2,
+  3
+ ],
+ "bootstrap": 1000,
+ "neg_frac": 1.0,
+ "firms_start": "2012-01-20",
+ "firms_day_range": 5,
+ "firms_workers": 4,
+ "firms_tx_per_10min": 4000,
+ "firms_dir": "data/raw/firms",
+ "firms_glob": "data/raw/firms/VIIRS_SNPP_[SN]*/**/*.csv",
+ "gee_project": "YOUR-EARTH-ENGINE-PROJECT",
+ "gee_workers": 6,
+ "tile_deg_monthly": 2.0,
+ "tile_deg_static": 0.5,
+ "embedding_years": [
+  2017,
+  2025
+ ],
+ "gee_ids": {
+  "mcd64a1": "MODIS/061/MCD64A1",
+  "mod14a1": "MODIS/061/MOD14A1",
+  "myd14a1": "MODIS/061/MYD14A1",
+  "chirps": "UCSB-CHG/CHIRPS/DAILY",
+  "era5land_monthly": "ECMWF/ERA5_LAND/MONTHLY_AGGR",
+  "worldcover": "ESA/WorldCover/v200",
+  "lsib": "USDOS/LSIB_SIMPLE/2017",
+  "alphaearth": "GOOGLE/SATELLITE_EMBEDDING/V1/ANNUAL",
+  "srtm": "USGS/SRTMGL1_003"
+ },
+ "peat_map": "data/raw/peat/peatmap_indonesia.gpkg",
+ "oni_urls": [
+  "https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt"
+ ],
+ "dmi_urls": [
+  "https://www.cpc.ncep.noaa.gov/products/international/ocean_monitoring/IODMI/mnth.ersstv6.clim19912020.dmi_current.txt"
+ ],
+ "fwi_cds": {
+  "_verify": "Check against the download form of the dataset on the Copernicus site ('Show API request') before use.",
+  "_url_note": "The FWI dataset moved from the CDS to the Early Warning Data Store (EWDS); request schema checked on 2026-09-30.",
+  "url": "https://ewds.climate.copernicus.eu/api",
+  "dataset": "cems-fire-historical-v1",
+  "request": {
+   "product_type": [
+    "reanalysis"
+   ],
+   "variable": [
+    "fire_weather_index"
+   ],
+   "dataset_type": "consolidated_dataset",
+   "system_version": [
+    "4_1"
+   ],
+   "month": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12"
+   ],
+   "day": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    "31"
+   ],
+   "grid": "0.25/0.25",
+   "area": [
+    7,
+    94,
+    -10,
+    142
+   ],
+   "data_format": "netcdf"
+  },
+  "current_year_overrides": {
+   "dataset_type": "intermediate_dataset"
+  }
+ },
+ "cell_month": "data/cube/cell_month.csv.gz",
+ "cell_month_noaa20": "data/cube/cell_month_noaa20.csv.gz",
+ "candidate_cells": "data/cube/candidate_cells.csv",
+ "forecast_cells": "data/cube/forecast_cells.csv",
+ "gee_parts": "data/gee_parts",
+ "gee_monthly": "data/cube/gee_monthly.csv.gz",
+ "static_gee": "data/cube/static_gee.csv",
+ "static": "data/cube/static.csv",
+ "fwi_raw": "data/raw/fwi",
+ "fwi": "data/cube/fwi_monthly.csv",
+ "oni": "data/raw/oni.ascii.txt",
+ "dmi": "data/raw/dmi_monthly.csv",
+ "fingerprint": "data/cube/fp_2012_2025.csv",
+ "provenance": "data/provenance.json",
+ "registration": "registration/registration.json",
+ "manuscript": "manuscript.md",
+ "out": "results",
+ "followup_emb_years": [
+  2017,
+  2018
+ ],
+ "followup_susc_gee": "data/followup/susc_gee.csv",
+ "followup_susc_cells": "data/followup/susc_cells.csv"
+}

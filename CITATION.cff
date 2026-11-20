@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below. Please also cite the accompanying paper once it is published."
+title: "PyroRegime-ID: an open, pre-registered workflow for testing satellite embeddings against hydroclimate and decomposing the reproducibility of fire-regime classes"
+type: software
+version: "1.0.0"
+date-released: "2026-11-21"
+license: MIT
+repository-code: "https://github.com/agungtriayudi/pyroregime-id"
+authors:
+  - family-names: Triayudi
+    given-names: Agung
+    email: agungtriayudi@civitas.unas.ac.id
+    affiliation: "Faculty of Communication and Information Technology, Universitas Nasional, Jakarta, Indonesia"
+  - family-names: Wedha
+    given-names: Bayu Yasa
+    affiliation: "Faculty of Communication and Information Technology, Universitas Nasional, Jakarta, Indonesia"
+  - family-names: Nathasia
+    given-names: Novi Dian
+    affiliation: "Faculty of Communication and Information Technology, Universitas Nasional, Jakarta, Indonesia"
+keywords:
+  - reproducible research
+  - pre-registration
+  - clustering reproducibility
+  - foundation-model embeddings
+  - VIIRS active fire
+  - tropical peatland fire
+  - quantity and allocation disagreement

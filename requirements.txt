@@ -1,0 +1,16 @@
+# Minimum versions. The exact versions of the registered run are listed in requirements-lock.txt.
+# Analysis, smoke tests and the scripts in tools/ need only the first five packages.
+numpy>=1.26
+pandas>=2.2
+scipy>=1.11
+scikit-learn>=1.3        # includes HDBSCAN
+matplotlib>=3.8
+# Data retrieval (fetch_data.py and the scripts it calls)
+requests>=2.31
+earthengine-api>=1.0     # gee_fetch.py, gee_export.py
+geopandas>=0.14          # peat_fraction.py (vector peat map)
+rasterio>=1.3            # peat_fraction.py, raster_to_table.py
+xarray>=2024.1           # climate_fetch.py (FWI)
+netCDF4>=1.6             # climate_fetch.py (FWI)
+cdsapi>=0.7              # climate_fetch.py (FWI from the Copernicus Early Warning Data Store)
+# torch>=2.2             # optional, only for cluster_regimes.py --method idec (not used in the paper)

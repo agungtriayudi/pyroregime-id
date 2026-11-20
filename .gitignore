@@ -1,0 +1,24 @@
+# Credentials: never commit them (FIRMS map key, Copernicus key, Earth Engine tokens)
+.env
+*.env
+*.env.md
+*.cdsapirc
+*.cdsapirc.md
+.config/earthengine/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Downloaded inputs, the datacube and its provenance file (rebuilt by fetch_data.py; tens of GB)
+data/
+logs/
+
+# Outputs of the scripts that rebuild the tables and figures of the paper
+paper_tables/
+paper_figures/
+
+# Upload bundles written by run_all.py and the follow-ups
+results/*_bundle.zip
