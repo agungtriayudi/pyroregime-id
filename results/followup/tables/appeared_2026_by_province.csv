@@ -1,0 +1,23 @@
+region,province,cells,assigned_regime_mode,share_%
+kalimantan,Central Kalimantan,6647,6,27.6
+kalimantan,West Kalimantan,6009,4,25.0
+papua_selatan,Papua,4231,4,17.6
+kalimantan,East Kalimantan,2074,4,8.6
+sumatra,South Sumatra,1718,4,7.1
+kalimantan,South Kalimantan,1244,4,5.2
+sumatra,Riau,475,1,2.0
+sumatra,Jambi,432,4,1.8
+sumatra,Bangka-Belitung Islands,288,4,1.2
+kalimantan,North Kalimantan,260,4,1.1
+sumatra,Lampung,245,4,1.0
+sumatra,Aceh,171,10,0.7
+sumatra,Riau Islands,67,10,0.3
+sumatra,North Sumatra,63,4,0.3
+sumatra,West Sumatra,63,10,0.3
+kalimantan,West Sulawesi,34,4,0.1
+sumatra,Bengkulu,27,4,0.1
+kalimantan,Riau Islands,14,4,0.1
+sumatra,Banten,3,5,0.0
+kalimantan,Bangka-Belitung Islands,1,4,0.0
+sumatra,(outside ADM1 polygons),1,1,0.0
+kalimantan,(outside ADM1 polygons),1,5,0.0
