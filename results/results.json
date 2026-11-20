@@ -1,0 +1,790 @@
+{
+ "data": {
+  "n_detections": 1117266,
+  "n_cells": 26026,
+  "n_cell_months": 1154094,
+  "period": "2012\u20132026"
+ },
+ "clustering": {
+  "k": 11,
+  "method": "gmm",
+  "rule": "BIC minimum among stable solutions",
+  "silhouette": 0.02863918415673339,
+  "stab_ari": 0.8151802852578123,
+  "stab_sd": 0.08478260187904316,
+  "agreement_ari": 0.34764125347910785,
+  "sensor_ari": 0.29297691095343115,
+  "sensor_n_cells": 5319
+ },
+ "embedding": {
+  "ari_without_emb": 0.5178888056813529
+ },
+ "shift": {
+  "assign_acc": 0.7138242458370774,
+  "2015_2019": {
+   "from": "2015",
+   "to": "2019",
+   "n_both": 10653,
+   "frac_changed": 0.25945742983197223,
+   "ci_low": 0.23691973024094085,
+   "ci_high": 0.2859498128832121,
+   "appeared": 12652,
+   "disappeared": 45746
+  },
+  "2019_2023": {
+   "from": "2019",
+   "to": "2023",
+   "n_both": 3949,
+   "frac_changed": 0.23423651557356293,
+   "ci_low": 0.2082669903774281,
+   "ci_high": 0.26689459645090163,
+   "appeared": 9879,
+   "disappeared": 19356
+  },
+  "2023_2026": {
+   "from": "2023",
+   "to": "2026",
+   "n_both": 4769,
+   "frac_changed": 0.291885091214091,
+   "ci_low": 0.2575775412620597,
+   "ci_high": 0.3301371489439185,
+   "appeared": 24068,
+   "disappeared": 9059
+  },
+  "baseline_mean": 0.44125004939050555
+ },
+ "featureset": {
+  "all": {
+   "fire_history": {
+    "auc_pr": 0.31253964220616925
+   },
+   "hydro": {
+    "auc_pr": 0.44885208413856376
+   },
+   "emb": {
+    "auc_pr": 0.33430674696010454
+   },
+   "full": {
+    "auc_pr": 0.45485818274036055
+   },
+   "delta_full_emb": 0.12055143578025601,
+   "delta_ci_low": 0.11223946562088385,
+   "delta_ci_high": 0.1293349837206789
+  },
+  "peat": {
+   "fire_history": {
+    "auc_pr": 0.31119016484214423
+   },
+   "hydro": {
+    "auc_pr": 0.4727353246111751
+   },
+   "emb": {
+    "auc_pr": 0.33758757292713504
+   },
+   "full": {
+    "auc_pr": 0.4772179996377514
+   },
+   "delta_full_emb": 0.13963042671061637,
+   "delta_ci_low": 0.129423236830764,
+   "delta_ci_high": 0.1502470741654399
+  }
+ },
+ "forecast": {
+  "spatial_cv": {
+   "clim": {
+    "L1": {
+     "auc_pr": 0.14380667540247138,
+     "auc_roc": 0.8171317273417258,
+     "brier": 0.038107919485041844,
+     "bss": 0.0,
+     "base_rate": 0.04252518554683456,
+     "n": 4346342,
+     "auc_pr_ci_low": 0.13362293114135934,
+     "auc_pr_ci_high": 0.15325873089166145
+    },
+    "L2": {
+     "auc_pr": 0.14396014431418108,
+     "auc_roc": 0.8169236069816905,
+     "brier": 0.03819956713281492,
+     "bss": 0.0,
+     "base_rate": 0.04263345551575394,
+     "n": 4320316,
+     "auc_pr_ci_low": 0.13378593788629323,
+     "auc_pr_ci_high": 0.15341367513175164
+    },
+    "L3": {
+     "auc_pr": 0.14423514458625042,
+     "auc_roc": 0.8168977825318741,
+     "brier": 0.038308609166831424,
+     "bss": 0.0,
+     "base_rate": 0.042766091717140665,
+     "n": 4294290,
+     "auc_pr_ci_low": 0.13404258324757148,
+     "auc_pr_ci_high": 0.15375701381167498
+    }
+   },
+   "fwi": {
+    "L1": {
+     "auc_pr": 0.2327184696636656,
+     "auc_roc": 0.8441877701840921,
+     "brier": 0.03621107839840253,
+     "bss": 0.04977550893020721,
+     "base_rate": 0.04252518554683456,
+     "n": 4346342,
+     "auc_pr_ci_low": 0.21112727358516903,
+     "auc_pr_ci_high": 0.25229981677120156
+    },
+    "L2": {
+     "auc_pr": 0.1859588830161057,
+     "auc_roc": 0.8299091948545853,
+     "brier": 0.03743000249081664,
+     "bss": 0.02014589954180912,
+     "base_rate": 0.04263345551575394,
+     "n": 4320316,
+     "auc_pr_ci_low": 0.16950040101830957,
+     "auc_pr_ci_high": 0.20188843669806708
+    },
+    "L3": {
+     "auc_pr": 0.16633435125989315,
+     "auc_roc": 0.8223673380902796,
+     "brier": 0.03798671342894969,
+     "bss": 0.008402699677242387,
+     "base_rate": 0.042766091717140665,
+     "n": 4294290,
+     "auc_pr_ci_low": 0.15144789706442627,
+     "auc_pr_ci_high": 0.1807022362981347
+    }
+   },
+   "global": {
+    "L1": {
+     "auc_pr": 0.45485818274036055,
+     "auc_roc": 0.9291865632394459,
+     "brier": 0.029459855709994036,
+     "bss": 0.22693613012492997,
+     "base_rate": 0.04252518554683456,
+     "n": 4346342,
+     "auc_pr_ci_low": 0.4350444960437037,
+     "auc_pr_ci_high": 0.4722569074158403
+    },
+    "L2": {
+     "auc_pr": 0.41419796564167366,
+     "auc_roc": 0.921877699524283,
+     "brier": 0.03074240711183025,
+     "bss": 0.1952158252227597,
+     "base_rate": 0.04263345551575394,
+     "n": 4320316,
+     "auc_pr_ci_low": 0.3947949666317358,
+     "auc_pr_ci_high": 0.4301833369193913
+    },
+    "L3": {
+     "auc_pr": 0.4088222964097403,
+     "auc_roc": 0.9202610240755672,
+     "brier": 0.031016807269628355,
+     "bss": 0.19034368659660184,
+     "base_rate": 0.042766091717140665,
+     "n": 4294290,
+     "auc_pr_ci_low": 0.38906931248850946,
+     "auc_pr_ci_high": 0.4255866870427172
+    }
+   },
+   "global_regime": {
+    "L1": {
+     "auc_pr": 0.45765374981680107,
+     "auc_roc": 0.9298746219178161,
+     "brier": 0.02939936507268309,
+     "bss": 0.22852348094671093,
+     "base_rate": 0.04252518554683456,
+     "n": 4346342,
+     "auc_pr_ci_low": 0.43791283437028705,
+     "auc_pr_ci_high": 0.47496090104775424
+    },
+    "L2": {
+     "auc_pr": 0.4164899986711706,
+     "auc_roc": 0.9223968307979517,
+     "brier": 0.03068693306136828,
+     "bss": 0.1966680419525747,
+     "base_rate": 0.04263345551575394,
+     "n": 4320316,
+     "auc_pr_ci_low": 0.3969849703972369,
+     "auc_pr_ci_high": 0.432710324618925
+    },
+    "L3": {
+     "auc_pr": 0.4119699225235293,
+     "auc_roc": 0.9203619055269127,
+     "brier": 0.03096834345110116,
+     "bss": 0.19160877607860682,
+     "base_rate": 0.042766091717140665,
+     "n": 4294290,
+     "auc_pr_ci_low": 0.3922293575235405,
+     "auc_pr_ci_high": 0.42887905527562126
+    }
+   },
+   "moe": {
+    "L1": {
+     "auc_pr": 0.4746879767919251,
+     "auc_roc": 0.933419439459888,
+     "brier": 0.028910811852403837,
+     "bss": 0.24134373528967035,
+     "base_rate": 0.04252518554683456,
+     "n": 4346342,
+     "auc_pr_ci_low": 0.4557486911100302,
+     "auc_pr_ci_high": 0.4917142324341852
+    },
+    "L2": {
+     "auc_pr": 0.43695076192867766,
+     "auc_roc": 0.9274724019929211,
+     "brier": 0.030096684446679636,
+     "bss": 0.21211975146112572,
+     "base_rate": 0.04263345551575394,
+     "n": 4320316,
+     "auc_pr_ci_low": 0.41766492075473965,
+     "auc_pr_ci_high": 0.45336407410354196
+    },
+    "L3": {
+     "auc_pr": 0.4308049655341184,
+     "auc_roc": 0.925502531679437,
+     "brier": 0.03039697540992889,
+     "bss": 0.20652364909537435,
+     "base_rate": 0.042766091717140665,
+     "n": 4294290,
+     "auc_pr_ci_low": 0.41029360301465273,
+     "auc_pr_ci_high": 0.4476004794475953
+    }
+   },
+   "delta_moe_global": {
+    "L1": {
+     "mean": 0.019829794051564542,
+     "ci_low": 0.016542733056375016,
+     "ci_high": 0.023076050580901127,
+     "p": 0.0
+    },
+    "L2": {
+     "mean": 0.022752796287003996,
+     "ci_low": 0.01797753172121449,
+     "ci_high": 0.027379606751456464,
+     "p": 0.0
+    },
+    "L3": {
+     "mean": 0.021982669124378074,
+     "ci_low": 0.017673767210844557,
+     "ci_high": 0.02621344385208067,
+     "p": 0.0
+    }
+   }
+  },
+  "loeno": {
+   "clim": {
+    "L1": {
+     "auc_pr": 0.2294128164594228,
+     "auc_roc": 0.7464709266044225,
+     "brier": 0.06612302365223016,
+     "bss": 0.0,
+     "base_rate": 0.07888799234953081,
+     "n": 936936,
+     "auc_pr_ci_low": 0.19936984024591498,
+     "auc_pr_ci_high": 0.2583192311600259
+    },
+    "L2": {
+     "auc_pr": 0.2308885721326532,
+     "auc_roc": 0.7370965532383935,
+     "brier": 0.06629870505989457,
+     "bss": 0.0,
+     "base_rate": 0.07888799234953081,
+     "n": 936936,
+     "auc_pr_ci_low": 0.20084206936911414,
+     "auc_pr_ci_high": 0.2597815185581673
+    },
+    "L3": {
+     "auc_pr": 0.23191183798177287,
+     "auc_roc": 0.7283355200984729,
+     "brier": 0.06646808147263314,
+     "bss": 0.0,
+     "base_rate": 0.07888799234953081,
+     "n": 936936,
+     "auc_pr_ci_low": 0.2015947935366894,
+     "auc_pr_ci_high": 0.26099954227734284
+    }
+   },
+   "fwi": {
+    "L1": {
+     "auc_pr": 0.3347815528760423,
+     "auc_roc": 0.8451331312697824,
+     "brier": 0.06414397103749664,
+     "bss": 0.029929856582817882,
+     "base_rate": 0.07888799234953081,
+     "n": 936936,
+     "auc_pr_ci_low": 0.3026863280165518,
+     "auc_pr_ci_high": 0.3615347436850205
+    },
+    "L2": {
+     "auc_pr": 0.2860559739199601,
+     "auc_roc": 0.7964732274545161,
+     "brier": 0.06633891606324786,
+     "bss": -0.000606512650842328,
+     "base_rate": 0.07888799234953081,
+     "n": 936936,
+     "auc_pr_ci_low": 0.25437717475043686,
+     "auc_pr_ci_high": 0.31401073063081725
+    },
+    "L3": {
+     "auc_pr": 0.2600543385254287,
+     "auc_roc": 0.7432261744644955,
+     "brier": 0.06766529996684187,
+     "bss": -0.01801193095518583,
+     "base_rate": 0.07888799234953081,
+     "n": 936936,
+     "auc_pr_ci_low": 0.22648252493809623,
+     "auc_pr_ci_high": 0.2908235347283327
+    }
+   },
+   "global": {
+    "L1": {
+     "auc_pr": 0.3526203799799987,
+     "auc_roc": 0.7817231227765211,
+     "brier": 0.06160461804876081,
+     "bss": 0.06833331801693798,
+     "base_rate": 0.07888799234953081,
+     "n": 936936,
+     "auc_pr_ci_low": 0.3248540792256002,
+     "auc_pr_ci_high": 0.38004317440140056
+    },
+    "L2": {
+     "auc_pr": 0.2774956949653175,
+     "auc_roc": 0.7444146708873634,
+     "brier": 0.06675142443420064,
+     "bss": -0.006828479891078931,
+     "base_rate": 0.07888799234953081,
+     "n": 936936,
+     "auc_pr_ci_low": 0.2484395309426015,
+     "auc_pr_ci_high": 0.3073520598685082
+    },
+    "L3": {
+     "auc_pr": 0.26963660068017625,
+     "auc_roc": 0.7516838857610585,
+     "brier": 0.0684018225302624,
+     "bss": -0.029092776785282215,
+     "base_rate": 0.07888799234953081,
+     "n": 936936,
+     "auc_pr_ci_low": 0.23997194230630645,
+     "auc_pr_ci_high": 0.29698407361522605
+    }
+   },
+   "global_regime": {
+    "L1": {
+     "auc_pr": 0.3485304892961461,
+     "auc_roc": 0.7622356868042908,
+     "brier": 0.06183596726274031,
+     "bss": 0.06483454858382387,
+     "base_rate": 0.07888799234953081,
+     "n": 936936,
+     "auc_pr_ci_low": 0.3213186421833099,
+     "auc_pr_ci_high": 0.3757884946271167
+    },
+    "L2": {
+     "auc_pr": 0.2813253755882604,
+     "auc_roc": 0.7494759274652031,
+     "brier": 0.06645890561408133,
+     "bss": -0.0024163451464402907,
+     "base_rate": 0.07888799234953081,
+     "n": 936936,
+     "auc_pr_ci_low": 0.25219407357441403,
+     "auc_pr_ci_high": 0.3106557594316397
+    },
+    "L3": {
+     "auc_pr": 0.2644392482658518,
+     "auc_roc": 0.7381658355973839,
+     "brier": 0.06837460017045838,
+     "bss": -0.02868322141372781,
+     "base_rate": 0.07888799234953081,
+     "n": 936936,
+     "auc_pr_ci_low": 0.23461700676065117,
+     "auc_pr_ci_high": 0.29280141229762585
+    }
+   },
+   "moe": {
+    "L1": {
+     "auc_pr": 0.33637588393384465,
+     "auc_roc": 0.7853234449751187,
+     "brier": 0.06319542725591172,
+     "bss": 0.044274992803050695,
+     "base_rate": 0.07888799234953081,
+     "n": 936936,
+     "auc_pr_ci_low": 0.3068463343155459,
+     "auc_pr_ci_high": 0.365969380184617
+    },
+    "L2": {
+     "auc_pr": 0.2603942872321572,
+     "auc_roc": 0.7658325741738636,
+     "brier": 0.06912083102752566,
+     "bss": -0.04256683392355187,
+     "base_rate": 0.07888799234953081,
+     "n": 936936,
+     "auc_pr_ci_low": 0.23183467299096275,
+     "auc_pr_ci_high": 0.29080261697816245
+    },
+    "L3": {
+     "auc_pr": 0.2561715719728858,
+     "auc_roc": 0.761699292208563,
+     "brier": 0.06928859517063973,
+     "bss": -0.042434107251431374,
+     "base_rate": 0.07888799234953081,
+     "n": 936936,
+     "auc_pr_ci_low": 0.22828274813939256,
+     "auc_pr_ci_high": 0.28515807429304835
+    }
+   },
+   "delta_moe_global": {
+    "L1": {
+     "mean": -0.016244496046154022,
+     "ci_low": -0.02068338399532609,
+     "ci_high": -0.01072870114258874,
+     "p": 1.0
+    },
+    "L2": {
+     "mean": -0.017101407733160323,
+     "ci_low": -0.0215887619974008,
+     "ci_high": -0.011628149282502775,
+     "p": 1.0
+    },
+    "L3": {
+     "mean": -0.013465028707290438,
+     "ci_low": -0.01997880911391576,
+     "ci_high": -0.005591019306407712,
+     "p": 1.0
+    }
+   }
+  },
+  "holdout2026": {
+   "clim": {
+    "L1": {
+     "auc_pr": 0.36317741321417263,
+     "auc_roc": 0.7228919628728732,
+     "brier": 0.14681532409897793,
+     "bss": 0.0,
+     "base_rate": 0.20039575808806578,
+     "n": 52052,
+     "auc_pr_ci_low": 0.3132582852424222,
+     "auc_pr_ci_high": 0.4131796285411557
+    },
+    "L2": {
+     "auc_pr": 0.36317741321417263,
+     "auc_roc": 0.7228919628728732,
+     "brier": 0.14681532409897793,
+     "bss": 0.0,
+     "base_rate": 0.20039575808806578,
+     "n": 52052,
+     "auc_pr_ci_low": 0.3132582852424222,
+     "auc_pr_ci_high": 0.4131796285411557
+    },
+    "L3": {
+     "auc_pr": 0.36317741321417263,
+     "auc_roc": 0.7228919628728732,
+     "brier": 0.14681532409897793,
+     "bss": 0.0,
+     "base_rate": 0.20039575808806578,
+     "n": 52052,
+     "auc_pr_ci_low": 0.3132582852424222,
+     "auc_pr_ci_high": 0.4131796285411557
+    }
+   },
+   "fwi": {
+    "L1": {
+     "auc_pr": 0.43732179501875756,
+     "auc_roc": 0.7761870541894187,
+     "brier": 0.1445701445414558,
+     "bss": 0.015292542323500968,
+     "base_rate": 0.20039575808806578,
+     "n": 52052,
+     "auc_pr_ci_low": 0.3880969053345158,
+     "auc_pr_ci_high": 0.4826558564208972
+    },
+    "L2": {
+     "auc_pr": 0.4263796676724867,
+     "auc_roc": 0.7615977873901075,
+     "brier": 0.14649620031050817,
+     "bss": 0.0021736408677245356,
+     "base_rate": 0.20039575808806578,
+     "n": 52052,
+     "auc_pr_ci_low": 0.3766863929596166,
+     "auc_pr_ci_high": 0.4715310850088396
+    },
+    "L3": {
+     "auc_pr": 0.40074169090022294,
+     "auc_roc": 0.7300681673660203,
+     "brier": 0.15457029261405464,
+     "bss": -0.05282124711892178,
+     "base_rate": 0.20039575808806578,
+     "n": 52052,
+     "auc_pr_ci_low": 0.3515790355894203,
+     "auc_pr_ci_high": 0.44814761014347687
+    }
+   },
+   "global": {
+    "L1": {
+     "auc_pr": 0.48558030085306825,
+     "auc_roc": 0.7917924280271459,
+     "brier": 0.13356372112869383,
+     "bss": 0.0902603529407483,
+     "base_rate": 0.20039575808806578,
+     "n": 52052,
+     "auc_pr_ci_low": 0.43125953663639977,
+     "auc_pr_ci_high": 0.5365480767975235
+    },
+    "L2": {
+     "auc_pr": 0.4672296518038881,
+     "auc_roc": 0.7838449324123318,
+     "brier": 0.14308456504174522,
+     "bss": 0.0254112374176797,
+     "base_rate": 0.20039575808806578,
+     "n": 52052,
+     "auc_pr_ci_low": 0.4179548409333294,
+     "auc_pr_ci_high": 0.513786388445612
+    },
+    "L3": {
+     "auc_pr": 0.4290141114980121,
+     "auc_roc": 0.7642898975632197,
+     "brier": 0.1642465809521366,
+     "bss": -0.11872913784808392,
+     "base_rate": 0.20039575808806578,
+     "n": 52052,
+     "auc_pr_ci_low": 0.3819927716151588,
+     "auc_pr_ci_high": 0.4761302844452762
+    }
+   },
+   "global_regime": {
+    "L1": {
+     "auc_pr": 0.4928038132914463,
+     "auc_roc": 0.794149103552092,
+     "brier": 0.13228574576561036,
+     "bss": 0.09896499852816609,
+     "base_rate": 0.20039575808806578,
+     "n": 52052,
+     "auc_pr_ci_low": 0.4405304087487627,
+     "auc_pr_ci_high": 0.5433424038000055
+    },
+    "L2": {
+     "auc_pr": 0.46597055533376874,
+     "auc_roc": 0.7827743313660556,
+     "brier": 0.1430569349864845,
+     "bss": 0.025599433407643812,
+     "base_rate": 0.20039575808806578,
+     "n": 52052,
+     "auc_pr_ci_low": 0.4187801244157063,
+     "auc_pr_ci_high": 0.5109262338669193
+    },
+    "L3": {
+     "auc_pr": 0.4367013360505492,
+     "auc_roc": 0.7687596488696679,
+     "brier": 0.1616888225999124,
+     "bss": -0.10130753442949358,
+     "base_rate": 0.20039575808806578,
+     "n": 52052,
+     "auc_pr_ci_low": 0.38686484341220634,
+     "auc_pr_ci_high": 0.4823001206423028
+    }
+   },
+   "moe": {
+    "L1": {
+     "auc_pr": 0.49642631003320786,
+     "auc_roc": 0.7882143551794659,
+     "brier": 0.13549753492594885,
+     "bss": 0.07708860939747009,
+     "base_rate": 0.20039575808806578,
+     "n": 52052,
+     "auc_pr_ci_low": 0.44134749404983437,
+     "auc_pr_ci_high": 0.5473682606576045
+    },
+    "L2": {
+     "auc_pr": 0.4678887215974115,
+     "auc_roc": 0.7797883690763788,
+     "brier": 0.1406913016377595,
+     "bss": 0.041712419999766714,
+     "base_rate": 0.20039575808806578,
+     "n": 52052,
+     "auc_pr_ci_low": 0.4163741946378357,
+     "auc_pr_ci_high": 0.5170325075321849
+    },
+    "L3": {
+     "auc_pr": 0.46071985833139084,
+     "auc_roc": 0.7762327263340961,
+     "brier": 0.1407071322665147,
+     "bss": 0.041604593185008976,
+     "base_rate": 0.20039575808806578,
+     "n": 52052,
+     "auc_pr_ci_low": 0.4049261053907638,
+     "auc_pr_ci_high": 0.510795507634631
+    }
+   },
+   "delta_moe_global": {
+    "L1": {
+     "mean": 0.010846009180139615,
+     "ci_low": -0.0029378775978074157,
+     "ci_high": 0.02890586620957061,
+     "p": 0.078
+    },
+    "L2": {
+     "mean": 0.0006590697935234258,
+     "ci_low": -0.018325732935653323,
+     "ci_high": 0.016676655733971757,
+     "p": 0.471
+    },
+    "L3": {
+     "mean": 0.031705746833378734,
+     "ci_low": 0.010229956670887594,
+     "ci_high": 0.05358085120012548,
+     "p": 0.001
+    }
+   }
+  }
+ },
+ "meta": {
+  "registration_status": "registered",
+  "params_sha256": "2fe77e61dab9ff5ac2d3faeae0aaf0cc7b2983fb7e9c2df65d09e7cd18bf69e0",
+  "code_sha256": "1d3d980960838a577d4892f607380a366cc69fc057dbdd1dd16d82e07643ea86",
+  "synthetic": false,
+  "provenance": {
+   "oni": {
+    "url": "https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt",
+    "last": "  JJA 2026  29.09   1.80"
+   },
+   "dmi": {
+    "url": "https://www.cpc.ncep.noaa.gov/products/international/ocean_monitoring/IODMI/mnth.ersstv6.clim19912020.dmi_current.txt",
+    "first": "1950-01",
+    "last": "2026-08"
+   },
+   "changes": [
+    {
+     "date": "2026-09-30",
+     "what": "dmi_urls",
+     "before": [
+      "https://psl.noaa.gov/gcos_wgsp/Timeseries/Data/dmi.had.long.data",
+      "https://psl.noaa.gov/data/timeseries/month/data/dmi.data"
+     ],
+     "after": [
+      "https://www.cpc.ncep.noaa.gov/products/international/ocean_monitoring/IODMI/mnth.ersstv6.clim19912020.dmi_current.txt"
+     ],
+     "why": "DMI PSL (HadISST1.1) berakhir 2026-05 (2026-06 dst. = -9999); URL kedua HTTP 404. Prediktor butuh sampai 2026-08. Diganti seri DMI bulanan resmi NOAA CPC (ERSSTv6, klimatologi 1991-2020), 1950-01 s.d. 2026-08, satu sumber untuk seluruh panel. CPC: nilai dapat berubah hingga 2 bulan setelah rilis awal.",
+     "code": "climate_fetch.py: parse_cpc_dmi()",
+     "results_seen": false
+    },
+    {
+     "date": "2026-09-30",
+     "what": "fwi_cds.url",
+     "before": "https://cds.climate.copernicus.eu/api (bawaan ~/.cdsapirc)",
+     "after": "https://ewds.climate.copernicus.eu/api",
+     "why": "cems-fire-historical-v1 tidak lagi ada di katalog CDS ('process not found'); dataset yang sama ada di Copernicus Early Warning Data Store (EWDS). Skema permintaan EWDS diperiksa: semua kunci/nilai di fwi_cds.request valid (reanalysis, fire_weather_index, consolidated/intermediate_dataset, system_version 4_1, grid 0.25/0.25, netcdf).",
+     "code": "climate_fetch.py: cdsapi.Client(url=cfg['fwi_cds']['url'])",
+     "results_seen": false
+    },
+    {
+     "date": "2026-09-30",
+     "what": "peat_map",
+     "before": "data/raw/peat/peta_gambut.gpkg (BBSDLP 2019, 1:50.000; Anda dkk., 2021) \u2014 tidak tersedia",
+     "after": "data/raw/peat/peatmap_indonesia.gpkg",
+     "source": {
+      "dataset": "PEATMAP (Xu, Morris, Liu & Holden 2017/2018), berkas Asia.zip -> Asia/SEA_Peatland.shp",
+      "url": "https://archive.researchdata.leeds.ac.uk/251/5/Asia.zip",
+      "doi": "https://doi.org/10.5518/252",
+      "article": "Xu dkk. (2018) Catena 160:134-140, https://doi.org/10.1016/j.catena.2017.09.010",
+      "license": "CC BY 4.0",
+      "indonesia_source_per_peatmap": "Ritung dkk. (2011), BBSDLP, 1:250.000, data 2005-2010 ('Indonesia Peat Lands'); Malaysia (bagian bbox Kalimantan): Wetlands International (2010) 1:50.000",
+      "downloaded": "2026-09-30",
+      "asia_zip_sha256": "8767e9ba8250770420cc555250f80b79b67410d00ae13ac629f4fe2ae9b8724e",
+      "gpkg_sha256": "948b4f310047bb6f8a1f073809ef6109a4f446571ea6a232851ec301f3431ed3",
+      "processing": "SEA_Peatland (ESRI:54034) -> EPSG:4326, make_valid, clip ke bbox config.regions, explode (1.186 poligon: sumatra 446, kalimantan 633, papua_selatan 107)"
+     },
+     "why": "Peta BBSDLP 2019 poligon tidak dapat diunduh secara sah dan berlisensi (situs BBSDLP/BSIP dan repositori Kementan tidak dapat diakses; Ina-Geoportal hanya layer provinsi/kabupaten; Trase hanya luas agregat; salinan Yayasan Gambut hanya Riau dan tanpa lisensi). Pengguna memilih peta global (opsi 3) pada 2026-09-30. Tabel 1 naskah berubah.",
+     "user_decision": true,
+     "results_seen": false
+    },
+    {
+     "date": "2026-10-01",
+     "what": "agregasi embedding AlphaEarth (gee_fetch.embedding_image)",
+     "before": "rerata semua piksel 10 m per sel 0,01 derajat (reduceResolution mean, maxPixels 65535)",
+     "after": "rerata sampel sistematis 10 x 10 titik per sel (reproject tetangga terdekat ke kisi 0,001 derajat, lalu reduceResolution mean)",
+     "why": "Rerata penuh melampaui memori GEE (interaktif dan batch, termasuk tileScale 8) dan laju ~1 sel/detik (berhari-hari); akar aset project tidak tersedia. Validasi 800 sel (Riau, Kalteng; 2023): korelasi per band median 0,999 (min 0,996), galat rerata 2,7% SD antar-sel, korelasi 8 komponen PCA 0,997-1,000 (logs/emb_sample_validation.txt).",
+     "user_decision": true,
+     "before_registration": true,
+     "results_seen": false
+    }
+   ],
+   "firms_availability": {
+    "MODIS_NRT": [
+     "2026-07-01",
+     "2026-09-30"
+    ],
+    "MODIS_SP": [
+     "2000-11-01",
+     "2026-06-30"
+    ],
+    "VIIRS_NOAA20_NRT": [
+     "2026-07-01",
+     "2026-09-30"
+    ],
+    "VIIRS_NOAA20_SP": [
+     "2018-04-01",
+     "2026-06-30"
+    ],
+    "VIIRS_NOAA21_NRT": [
+     "2024-01-17",
+     "2026-09-30"
+    ],
+    "VIIRS_SNPP_NRT": [
+     "2026-07-01",
+     "2026-09-30"
+    ],
+    "VIIRS_SNPP_SP": [
+     "2012-01-20",
+     "2026-06-30"
+    ],
+    "LANDSAT_NRT": [
+     "2022-06-20",
+     "2026-09-30"
+    ],
+    "GOES_NRT": [
+     "2022-08-09",
+     "2026-09-30"
+    ],
+    "BA_MODIS": [
+     "2000-11-01",
+     "2026-07-01"
+    ],
+    "BA_VIIRS": [
+     "2012-03-01",
+     "2026-07-01"
+    ]
+   },
+   "sp_nrt_overlap": "NRT tumpang tindih tidak tersedia: arsip NRT mulai 2026-07-01, arsip SP berakhir 2026-06-30",
+   "firms": {
+    "snpp_sp": [
+     "2012-01-20",
+     "2026-06-30"
+    ],
+    "snpp_nrt": [
+     "2026-07-01",
+     "2026-09-29"
+    ],
+    "noaa20_sp": [
+     "2018-01-01",
+     "2025-12-31"
+    ]
+   },
+   "cells": {
+    "candidate": 106828,
+    "forecast_domain_before_lsib": 27097
+   },
+   "fwi": {
+    "dataset": "cems-fire-historical-v1",
+    "variable_in_file": "fwinx",
+    "first": "2012-01",
+    "last": "2026-09",
+    "n_cells": 27097
+   },
+   "oni_last_season": "JJA 2026",
+   "verify": {
+    "ok": true,
+    "problems": []
+   }
+  }
+ }
+}
