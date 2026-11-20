@@ -1,0 +1,271 @@
+{
+ "_note": "Provenance file of the published run (data/provenance.json), with its Indonesian text translated into English for the public release (2026-11-21). Values are otherwise unchanged.",
+ "oni": {
+  "url": "https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt",
+  "last": "  JJA 2026  29.09   1.80"
+ },
+ "dmi": {
+  "url": "https://www.cpc.ncep.noaa.gov/products/international/ocean_monitoring/IODMI/mnth.ersstv6.clim19912020.dmi_current.txt",
+  "first": "1950-01",
+  "last": "2026-08"
+ },
+ "changes": [
+  {
+   "date": "2026-09-30",
+   "what": "dmi_urls",
+   "before": [
+    "https://psl.noaa.gov/gcos_wgsp/Timeseries/Data/dmi.had.long.data",
+    "https://psl.noaa.gov/data/timeseries/month/data/dmi.data"
+   ],
+   "after": [
+    "https://www.cpc.ncep.noaa.gov/products/international/ocean_monitoring/IODMI/mnth.ersstv6.clim19912020.dmi_current.txt"
+   ],
+   "why": "The PSL DMI (HadISST1.1) ends in 2026-05 (2026-06 onward = -9999); the second URL returns HTTP 404. Predictors are needed until 2026-08. Replaced by the official monthly NOAA CPC DMI series (ERSSTv6, 1991-2020 climatology), 1950-01 to 2026-08, one source for the whole panel. CPC: values may change for up to 2 months after the first release.",
+   "code": "climate_fetch.py: parse_cpc_dmi()",
+   "results_seen": false
+  },
+  {
+   "date": "2026-09-30",
+   "what": "fwi_cds.url",
+   "before": "https://cds.climate.copernicus.eu/api (default of ~/.cdsapirc)",
+   "after": "https://ewds.climate.copernicus.eu/api",
+   "why": "cems-fire-historical-v1 is no longer in the CDS catalogue ('process not found'); the same dataset is in the Copernicus Early Warning Data Store (EWDS). The EWDS request schema was checked: all keys and values in fwi_cds.request are valid (reanalysis, fire_weather_index, consolidated/intermediate_dataset, system_version 4_1, grid 0.25/0.25, netcdf).",
+   "code": "climate_fetch.py: cdsapi.Client(url=cfg['fwi_cds']['url'])",
+   "results_seen": false
+  },
+  {
+   "date": "2026-09-30",
+   "what": "peat_map",
+   "before": "data/raw/peat/peta_gambut.gpkg (BBSDLP 2019, 1:50,000; Anda et al., 2021) - not available",
+   "after": "data/raw/peat/peatmap_indonesia.gpkg",
+   "source": {
+    "dataset": "PEATMAP (Xu, Morris, Liu & Holden 2017/2018), file Asia.zip -> Asia/SEA_Peatland.shp",
+    "url": "https://archive.researchdata.leeds.ac.uk/251/5/Asia.zip",
+    "doi": "https://doi.org/10.5518/252",
+    "article": "Xu et al. (2018) Catena 160:134-140, https://doi.org/10.1016/j.catena.2017.09.010",
+    "license": "CC BY 4.0",
+    "indonesia_source_per_peatmap": "Ritung et al. (2011), BBSDLP, 1:250,000, data 2005-2010 ('Indonesia Peat Lands'); Malaysia (part of the Kalimantan bounding box): Wetlands International (2010) 1:50,000",
+    "downloaded": "2026-09-30",
+    "asia_zip_sha256": "8767e9ba8250770420cc555250f80b79b67410d00ae13ac629f4fe2ae9b8724e",
+    "gpkg_sha256": "948b4f310047bb6f8a1f073809ef6109a4f446571ea6a232851ec301f3431ed3",
+    "processing": "SEA_Peatland (ESRI:54034) -> EPSG:4326, make_valid, clip to the bounding boxes in config.regions, explode (1,186 polygons: sumatra 446, kalimantan 633, papua_selatan 107)"
+   },
+   "why": "The polygons of the 2019 BBSDLP map could not be downloaded legally with a licence (the BBSDLP/BSIP site and the repository of the Ministry of Agriculture were not accessible; Ina-Geoportal has only province/regency layers; Trase has only aggregate areas; the copy of Yayasan Gambut covers only Riau and has no licence). The user chose the global map (option 3) on 2026-09-30. Table 1 of the manuscript changed.",
+   "user_decision": true,
+   "results_seen": false
+  },
+  {
+   "date": "2026-10-01",
+   "what": "aggregation of the AlphaEarth embeddings (gee_fetch.embedding_image)",
+   "before": "mean of all 10 m pixels per 0.01-degree cell (reduceResolution mean, maxPixels 65535)",
+   "after": "mean of a systematic sample of 10 x 10 points per cell (nearest-neighbour reprojection to a 0.001-degree grid, then reduceResolution mean)",
+   "why": "The full mean exceeded the Earth Engine memory limits (interactive and batch, including tileScale 8) and ran at about 1 cell per second (several days); the project asset root was not available. Validation on 800 cells (Riau, Central Kalimantan; 2023): per-band correlation median 0.999 (minimum 0.996), mean error 2.7 % of the between-cell SD, correlation of the 8 principal components 0.997-1.000 (logs/emb_sample_validation.txt).",
+   "user_decision": true,
+   "before_registration": true,
+   "results_seen": false
+  }
+ ],
+ "firms_availability": {
+  "MODIS_NRT": [
+   "2026-07-01",
+   "2026-09-30"
+  ],
+  "MODIS_SP": [
+   "2000-11-01",
+   "2026-06-30"
+  ],
+  "VIIRS_NOAA20_NRT": [
+   "2026-07-01",
+   "2026-09-30"
+  ],
+  "VIIRS_NOAA20_SP": [
+   "2018-04-01",
+   "2026-06-30"
+  ],
+  "VIIRS_NOAA21_NRT": [
+   "2024-01-17",
+   "2026-09-30"
+  ],
+  "VIIRS_SNPP_NRT": [
+   "2026-07-01",
+   "2026-09-30"
+  ],
+  "VIIRS_SNPP_SP": [
+   "2012-01-20",
+   "2026-06-30"
+  ],
+  "LANDSAT_NRT": [
+   "2022-06-20",
+   "2026-09-30"
+  ],
+  "GOES_NRT": [
+   "2022-08-09",
+   "2026-09-30"
+  ],
+  "BA_MODIS": [
+   "2000-11-01",
+   "2026-07-01"
+  ],
+  "BA_VIIRS": [
+   "2012-03-01",
+   "2026-07-01"
+  ]
+ },
+ "sp_nrt_overlap": "overlapping NRT not available: NRT archive starts 2026-07-01, SP archive ends 2026-06-30",
+ "firms": {
+  "snpp_sp": [
+   "2012-01-20",
+   "2026-06-30"
+  ],
+  "snpp_nrt": [
+   "2026-07-01",
+   "2026-09-29"
+  ],
+  "noaa20_sp": [
+   "2018-01-01",
+   "2025-12-31"
+  ]
+ },
+ "cells": {
+  "candidate": 106828,
+  "forecast_domain_before_lsib": 27097
+ },
+ "fwi": {
+  "dataset": "cems-fire-historical-v1",
+  "variable_in_file": "fwinx",
+  "first": "2012-01",
+  "last": "2026-09",
+  "n_cells": 27097
+ },
+ "oni_last_season": "JJA 2026",
+ "verify": {
+  "ok": true,
+  "problems": []
+ },
+ "followup": {
+  "adm1": {
+   "file": "data/raw/boundaries/idn_adm1.geojson",
+   "downloaded": "2026-10-02",
+   "api": "https://www.geoboundaries.org/api/current/gbOpen/IDN/ADM1/",
+   "gjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IDN/ADM1/geoBoundaries-IDN-ADM1.geojson",
+   "boundaryID": "IDN-ADM1-65028918",
+   "boundaryYearRepresented": "2017",
+   "buildDate": "Dec 12, 2023",
+   "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+   "source": "OpenStreetMap, Wambacher",
+   "license": "Open Data Commons Open Database License 1.0",
+   "n_units": 34,
+   "sha256": "9a2c93ed5c956d7b9afeab4882e9aab9c3fceb8be4cafaae6e198223c2cbb3af",
+   "check_2022_provinces": "not included (Papua Selatan, Papua Tengah, Papua Pegunungan, Papua Barat Daya); their area still belongs to the polygon 'Papua'. Cells in the papua_selatan box are labelled with the region of that box (column region)."
+  },
+  "susc": {
+   "file": "data/followup/susc_cells.csv",
+   "gee_table": "data/followup/susc_gee.csv",
+   "code": "gee_fetch.py --kind susc (susc_phys_image, susc_keep, static_once_image, embedding_image); peat_fraction.py --table-in data/followup/susc_gee.csv --table-out data/followup/susc_cells.csv",
+   "cells_total": 342299,
+   "candidate_cells": 106828,
+   "hash_sample_noncandidate": 235471,
+   "land_indonesia_cells (in_indonesia>=0.5 & wc_water<0.5)": 179860,
+   "land_candidate": 101531,
+   "land_sample": 78329,
+   "tiles_0.5deg": 1035,
+   "jobs": 4140,
+   "parts_written": 4140,
+   "failed_parts": 0,
+   "gee_start": "2026-10-02 05:49:33",
+   "gee_end": "2026-10-02 07:11:33",
+   "peat_start": "2026-10-02 07:11:33",
+   "peat_end": "2026-10-02 07:11:44",
+   "sources": {
+    "elev/slope": "USGS/SRTMGL1_003 (ee.Terrain.slope), reduceResolution mean",
+    "rain_annual, dry_days_aso": "UCSB-CHG/CHIRPS/DAILY 2012-2018, bilinear resampling; total / 7; days < 1 mm in Aug-Oct / 7",
+    "swvl1_aso, t2m_annual": "ECMWF/ERA5_LAND/MONTHLY_AGGR 2012-2018, bilinear resampling; mean of Aug-Oct / mean of all months",
+    "wc_*, in_indonesia": "ESA/WorldCover/v200, USDOS/LSIB_SIMPLE/2017 (static_once_image, as in the main run)",
+    "emb_*": "AlphaEarth 2017 and 2018, systematic 10x10 sample (embedding_image, as in the main run), mean of the two years",
+    "peat_frac": "PEATMAP (data/raw/peat/peatmap_indonesia.gpkg), peat_fraction.py"
+   },
+   "checks": "see logs/followup_susc_checks.txt: required columns complete; NaN in land cells only for swvl1_aso/t2m_annual (0.08 %); candidate cells vs data/cube/static.csv: embeddings 2017-18 differ by at most 5e-06 (rounding), in_indonesia/wc_water/wc_tree/peat_frac identical"
+  }
+ },
+ "followup2": {
+  "label": "exploratory (Addendum 2, part E)",
+  "download_date": "2026-11-17",
+  "availability_query_time": "2026-11-17T13:08:22",
+  "archive_coverage": {
+   "VIIRS_SNPP_SP": [
+    "2012-01-20",
+    "2026-07-31"
+   ],
+   "VIIRS_SNPP_NRT": [
+    "2026-08-01",
+    "2026-11-02"
+   ],
+   "VIIRS_NOAA20_SP": [
+    "2018-04-01",
+    "2026-07-31"
+   ],
+   "VIIRS_NOAA20_NRT": [
+    "2026-08-01",
+    "2026-11-17"
+   ]
+  },
+  "holdout_target_months": [
+   "2026-08",
+   "2026-09"
+  ],
+  "source_per_month": {
+   "snpp": {
+    "2026-08": null,
+    "2026-09": null
+   },
+   "noaa20": {
+    "2026-08": "VIIRS_NOAA20_NRT",
+    "2026-09": "VIIRS_NOAA20_NRT"
+   }
+  },
+  "regions": {
+   "sumatra": [
+    95.0,
+    -6.2,
+    106.3,
+    6.0
+   ],
+   "kalimantan": [
+    108.5,
+    -4.3,
+    119.3,
+    4.5
+   ],
+   "papua_selatan": [
+    137.5,
+    -9.2,
+    141.1,
+    -5.5
+   ]
+  },
+  "raw_dir": "data/raw/firms_followup2",
+  "outputs": {
+   "snpp": {
+    "status": "skipped: the archive does not fully cover any hold-out month"
+   },
+   "noaa20": {
+    "sources": [
+     "VIIRS_NOAA20_NRT"
+    ],
+    "months_used": [
+     "2026-08",
+     "2026-09"
+    ],
+    "n_files": 39,
+    "n_raw_detection_rows": 287850,
+    "cube": "data/cube/followup2/cell_month_noaa20_2026.csv.gz",
+    "cube_rows": 82205,
+    "cube_rows_per_month": {
+     "2026-08": 37673,
+     "2026-09": 44532
+    }
+   }
+  },
+  "duration_s": 40.7
+ }
+}
