@@ -1,0 +1,20 @@
+{
+ "counts_2023_2026": {
+  "same regime": 3377,
+  "changed regime": 1392,
+  "burned only in 2026 (appeared)": 24068,
+  "burned only in 2023 (disappeared)": 9059
+ },
+ "n_appeared_by_province_total": 24068,
+ "adm1_file": "data/raw/boundaries/idn_adm1.geojson",
+ "registered_shift_2023_2026": {
+  "from": "2023",
+  "to": "2026",
+  "n_both": 4769,
+  "frac_changed": 0.291885091214091,
+  "ci_low": 0.2575775412620597,
+  "ci_high": 0.3301371489439185,
+  "appeared": 24068,
+  "disappeared": 9059
+ }
+}
