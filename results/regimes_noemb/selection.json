@@ -1,0 +1,13 @@
+{
+ "k": 10,
+ "rule": "BIC minimum among stable solutions",
+ "method": "kmeans",
+ "silhouette": 0.17853461525847586,
+ "stab_ari": 0.9286368520517196,
+ "stab_sd": 0.07464792844443838,
+ "agreement": {
+  "gmm": 0.3215263769410625
+ },
+ "agreement_ari": 0.3215263769410625,
+ "n_cells": 26026
+}
