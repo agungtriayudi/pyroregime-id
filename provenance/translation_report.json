@@ -1,0 +1,363 @@
+[
+ {
+  "file": "check_synthetic.py",
+  "replacements": 0,
+  "structure_identical": true,
+  "non_docstring_string_changes": []
+ },
+ {
+  "file": "climate_fetch.py",
+  "replacements": 2,
+  "structure_identical": true,
+  "non_docstring_string_changes": [
+   [
+    114,
+    " baris (",
+    " rows ("
+   ],
+   [
+    80,
+    "PERINGATAN: ",
+    "WARNING: "
+   ]
+  ]
+ },
+ {
+  "file": "cluster_regimes.py",
+  "replacements": 4,
+  "structure_identical": true,
+  "non_docstring_string_changes": [
+   [
+    181,
+    " sel, ",
+    " cells, "
+   ],
+   [
+    181,
+    " fitur (",
+    " features ("
+   ],
+   [
+    181,
+    " inti, ",
+    " core, "
+   ],
+   [
+    218,
+    "; kesepakatan ",
+    "; agreement "
+   ]
+  ]
+ },
+ {
+  "file": "fetch_data.py",
+  "replacements": 8,
+  "structure_identical": true,
+  "non_docstring_string_changes": [
+   [
+    180,
+    "VERIFIKASI:",
+    "VERIFY:"
+   ],
+   [
+    152,
+    "kandidat ",
+    "candidates "
+   ],
+   [
+    152,
+    " sel",
+    " cells"
+   ],
+   [
+    83,
+    " s.d. ",
+    " to "
+   ],
+   [
+    193,
+    "\n===== tahap ",
+    "\n===== stage "
+   ],
+   [
+    159,
+    ": berkas ",
+    ": file "
+   ],
+   [
+    112,
+    "gagal: ",
+    "failed: "
+   ],
+   [
+    175,
+    " berakhir ",
+    " ends "
+   ]
+  ]
+ },
+ {
+  "file": "fill_manuscript.py",
+  "replacements": 0,
+  "structure_identical": true,
+  "non_docstring_string_changes": []
+ },
+ {
+  "file": "firms_download.py",
+  "replacements": 1,
+  "structure_identical": true,
+  "non_docstring_string_changes": [
+   [
+    107,
+    " deteksi",
+    " detections"
+   ]
+  ]
+ },
+ {
+  "file": "followup/fig_redraw.py",
+  "replacements": 0,
+  "structure_identical": true,
+  "non_docstring_string_changes": []
+ },
+ {
+  "file": "followup/smoke_followup.py",
+  "replacements": 0,
+  "structure_identical": true,
+  "non_docstring_string_changes": []
+ },
+ {
+  "file": "followup/supplement_s1.py",
+  "replacements": 0,
+  "structure_identical": true,
+  "non_docstring_string_changes": []
+ },
+ {
+  "file": "followup/susceptibility.py",
+  "replacements": 1,
+  "structure_identical": true,
+  "non_docstring_string_changes": [
+   [
+    152,
+    " kolom",
+    " columns"
+   ]
+  ]
+ },
+ {
+  "file": "followup2/intersensor.py",
+  "replacements": 1,
+  "structure_identical": true,
+  "non_docstring_string_changes": [
+   [
+    597,
+    "SELESAI (eksploratif) -> ",
+    "DONE (exploratory) -> "
+   ]
+  ]
+ },
+ {
+  "file": "followup2/smoke_followup2.py",
+  "replacements": 0,
+  "structure_identical": true,
+  "non_docstring_string_changes": []
+ },
+ {
+  "file": "followup3/disagreement.py",
+  "replacements": 0,
+  "structure_identical": true,
+  "non_docstring_string_changes": []
+ },
+ {
+  "file": "forecast.py",
+  "replacements": 0,
+  "structure_identical": true,
+  "non_docstring_string_changes": []
+ },
+ {
+  "file": "gee_export.py",
+  "replacements": 0,
+  "structure_identical": true,
+  "non_docstring_string_changes": []
+ },
+ {
+  "file": "gee_fetch.py",
+  "replacements": 8,
+  "structure_identical": true,
+  "non_docstring_string_changes": [
+   [
+    207,
+    "ada",
+    "exists"
+   ],
+   [
+    228,
+    " baris",
+    " rows"
+   ],
+   [
+    251,
+    "potongan '",
+    "part '"
+   ],
+   [
+    258,
+    " baris -> ",
+    " rows -> "
+   ],
+   [
+    270,
+    " sel -> ",
+    " cells -> "
+   ],
+   [
+    278,
+    " baris -> ",
+    " rows -> "
+   ],
+   [
+    239,
+    "baris",
+    "rows"
+   ],
+   [
+    243,
+    "] GAGAL ",
+    "] FAILED "
+   ]
+  ]
+ },
+ {
+  "file": "grid_features.py",
+  "replacements": 1,
+  "structure_identical": true,
+  "non_docstring_string_changes": [
+   [
+    83,
+    " sel -> ",
+    " cells -> "
+   ]
+  ]
+ },
+ {
+  "file": "make_synthetic.py",
+  "replacements": 2,
+  "structure_identical": true,
+  "non_docstring_string_changes": [
+   [
+    155,
+    " sel, ",
+    " cells, "
+   ],
+   [
+    155,
+    " bulan -> ",
+    " months -> "
+   ]
+  ]
+ },
+ {
+  "file": "peat_fraction.py",
+  "replacements": 3,
+  "structure_identical": true,
+  "non_docstring_string_changes": [
+   [
+    107,
+    " sel (rerata ",
+    " cells (mean "
+   ],
+   [
+    102,
+    "buang ",
+    "dropping "
+   ],
+   [
+    102,
+    " sel; in_indonesia max ",
+    " cells; in_indonesia max "
+   ]
+  ]
+ },
+ {
+  "file": "raster_to_table.py",
+  "replacements": 1,
+  "structure_identical": true,
+  "non_docstring_string_changes": [
+   [
+    58,
+    " baris -> ",
+    " rows -> "
+   ]
+  ]
+ },
+ {
+  "file": "regime_features.py",
+  "replacements": 1,
+  "structure_identical": true,
+  "non_docstring_string_changes": [
+   [
+    113,
+    " deteksi (",
+    " detections ("
+   ]
+  ]
+ },
+ {
+  "file": "regime_shift.py",
+  "replacements": 0,
+  "structure_identical": true,
+  "non_docstring_string_changes": []
+ },
+ {
+  "file": "register.py",
+  "replacements": 1,
+  "structure_identical": true,
+  "non_docstring_string_changes": [
+   [
+    71,
+    "registrasi -> ",
+    "registration -> "
+   ]
+  ]
+ },
+ {
+  "file": "report.py",
+  "replacements": 2,
+  "structure_identical": true,
+  "non_docstring_string_changes": [
+   [
+    200,
+    " tabel, ",
+    " tables, "
+   ],
+   [
+    200,
+    " gambar -> ",
+    " figures -> "
+   ]
+  ]
+ },
+ {
+  "file": "run_all.py",
+  "replacements": 2,
+  "structure_identical": true,
+  "non_docstring_string_changes": [
+   [
+    116,
+    "\nSELESAI (",
+    "\nDONE ("
+   ],
+   [
+    116,
+    "). Unggah ",
+    "). Upload "
+   ]
+  ]
+ },
+ {
+  "file": "smoke_test.py",
+  "replacements": 0,
+  "structure_identical": true,
+  "non_docstring_string_changes": []
+ }
+]
