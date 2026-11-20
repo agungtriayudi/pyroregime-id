@@ -1,0 +1,76 @@
+{
+ "registered_utc": "2026-10-01T03:25:19+00:00",
+ "params": {
+  "ref_years": [
+   2012,
+   2025
+  ],
+  "min_det": 20,
+  "k_range": "3-12",
+  "methods": [
+   "kmeans",
+   "gmm",
+   "ae_kmeans",
+   "hdbscan"
+  ],
+  "cluster_boot": 50,
+  "shift_years": [
+   2015,
+   2019,
+   2023,
+   2026
+  ],
+  "neutral_years": [
+   2017,
+   2018,
+   2021,
+   2022
+  ],
+  "event_months": "1-10",
+  "event_min_det": 3,
+  "enso_years": [
+   2015,
+   2019,
+   2023
+  ],
+  "holdout_train_end": "2026-07",
+  "leads": [
+   1,
+   2,
+   3
+  ],
+  "bootstrap": 1000,
+  "neg_frac": 1.0,
+  "panel_start": "2012-01",
+  "regions": {
+   "sumatra": [
+    95.0,
+    -6.2,
+    106.3,
+    6.0
+   ],
+   "kalimantan": [
+    108.5,
+    -4.3,
+    119.3,
+    4.5
+   ],
+   "papua_selatan": [
+    137.5,
+    -9.2,
+    141.1,
+    -5.5
+   ]
+  }
+ },
+ "params_sha256": "2fe77e61dab9ff5ac2d3faeae0aaf0cc7b2983fb7e9c2df65d09e7cd18bf69e0",
+ "code_sha256": "1d3d980960838a577d4892f607380a366cc69fc057dbdd1dd16d82e07643ea86",
+ "code_files": [
+  "grid_features.py",
+  "regime_features.py",
+  "cluster_regimes.py",
+  "regime_shift.py",
+  "forecast.py",
+  "report.py"
+ ]
+}

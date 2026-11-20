@@ -1,0 +1,5 @@
+https://osf.io/8vr7f
+# ADDENDUM_followup2.md uploaded to the OSF project https://osf.io/5wyek (OSF Storage, version 1, 2026-11-17T06:36:00Z = 2026-11-17 13:36 WIB);
+# SHA-256 of the OSF file (bef11c409a321d2a53e23f28da0402cb675817835d460b468e2e3c9342ee51f6) identical to the local registration/ADDENDUM_followup2.md.
+# Note: FOLLOWUP2.md (task instructions, not the addendum) was also uploaded to the same project (https://osf.io/5wyek/files/r9qa2, 2026-11-17T06:28:48Z).
+# Original registration: https://osf.io/b2vc9
