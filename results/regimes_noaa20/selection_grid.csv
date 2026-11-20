@@ -1,0 +1,2 @@
+method,k,silhouette,calinski_harabasz,davies_bouldin,noise_frac,bic
+gmm,11,0.038443931266274475,281.9087382162492,3.502645847159933,0.0,130043.73451915219

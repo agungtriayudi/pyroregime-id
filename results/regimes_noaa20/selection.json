@@ -1,0 +1,11 @@
+{
+ "k": 11,
+ "rule": "fallback: highest silhouette",
+ "method": "gmm",
+ "silhouette": 0.038443931266274475,
+ "stab_ari": null,
+ "stab_sd": null,
+ "agreement": {},
+ "agreement_ari": null,
+ "n_cells": 5528
+}
